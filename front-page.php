@@ -1,7 +1,5 @@
 <?php 
-    /*
-        Template Name: Page Home
-    */
+
     $queryTaxonomy = array_key_exists('taxonomy', $_GET);
 	if( $queryTaxonomy && $_GET['taxonomy'] == '') {
         wp_redirect( home_url() );

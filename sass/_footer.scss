@@ -1,0 +1,10 @@
+.footer {
+    background-color: #26ae;
+    padding: 15px 0;
+    color: #fff;
+
+    p {
+        text-align: center;
+        @include type-5(16);
+    }
+}

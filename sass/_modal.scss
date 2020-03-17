@@ -1,0 +1,149 @@
+.modal {
+    position: relative;
+    margin: 0 auto;
+    text-align: c;
+    width: 50%;
+
+    .modal-dialog {
+        /* margin: 0 auto; */
+        width: 100%;
+        /* position: fixed; */
+        position: absolute;
+        z-index: 11;
+        top: 100px;
+        left: 67px;
+
+        .modal-content {
+            padding: 10px 50px;
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 80%;
+            pointer-events: auto;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            outline: 0;
+
+            .modal-header{
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem 1rem 0 1rem;
+
+                h4 {
+                    padding: 4px 0;
+                    color: #4285F4;
+                    font-size: 23px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                button {
+                    background: transparent;
+                    border: solid 1px #4285F4;
+                    border-radius: 100%;
+                    width: 40px;
+                    height: 40px;
+
+                    span {
+                        font-size: 32px;
+                        color: #4285F4;
+                    }
+                }
+            }
+
+            .modal-body {
+                padding: 1rem 1rem;
+
+                form {
+
+                    .form-group{
+                        margin: 30px 0;
+                    }
+
+                    label {
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 400;
+                        color: rgba(0, 0, 0, 0.6);
+                        @include type-1(14);
+                    }
+
+                    input {
+                        outline: none;
+                        display: block;
+                        background: rgba(0, 0, 0, 0.1);
+                        width: 100%;
+                        border: 0;
+                        border-radius: 4px;
+                        padding: 12px 20px;
+                        // color: rgba(0, 0, 0, 0.6);
+                        color: #4285F4;
+                        font-weight: 500;
+                        transition: 0.3s ease;
+                    }
+
+                    .forgot-password {
+                        display: flex;
+                        justify-content: space-between;
+
+                        input {
+                            width: 20px;
+                            margin-right: 7px;
+                            display: inline-block;
+                            background-color: transparent;
+                            border: solid 1px #fafafa;
+                        }
+
+                        label {
+                            text-transform: capitalize;
+                            letter-spacing: 0;
+                            font-weight: 400;
+                            color: rgba(0, 0, 0, 0.6)
+                        }
+
+                        .password {
+                            color: #4285F4;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .modal-register {
+                position: absolute;
+                height: 57.2vh;
+                width: 20px;
+                background-color: #4285F4;
+                right: 0;
+                top: 0;
+                border-top-right-radius: 7px;
+                border-bottom-right-radius: 7px;
+            }
+
+            .modal-footer {
+                padding: 1rem 1rem;
+
+                button {
+                    outline: none;
+                    background: #4285F4;
+                    width: 100%;
+                    border: 0;
+                    border-radius: 4px;
+                    padding: 12px 20px;
+                    color: #FFFFFF;
+                    font-family: inherit;
+                    font-size: inherit;
+                    font-weight: 500;
+                    line-height: inherit;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

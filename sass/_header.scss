@@ -1,0 +1,157 @@
+.header {
+    background-color: #001022;
+
+    &__wrapper {
+        // padding: 13px 0;
+
+        &__rowTop {
+            padding: 13px 0;
+
+            .container {
+                display: flex;
+                align-items: center;
+            }
+
+            .contact {
+                list-style: none;
+                margin-right: auto;
+                li {
+                    display: inline-block;
+
+                    &:nth-child(even){
+                        margin: 0 15px;
+                    }
+
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        transition: all 0.7s;
+                        @include type-2(14);
+
+                        &:hover {
+                            color: #26ae61;
+                            transition: all 0.7s;
+                            .fa-phone {
+                                color: #fff;
+                                transition: all 0.7s;
+                            }
+                        }
+
+                        i {
+                            color: #26ae61;
+                            font-size: 20px;
+                            margin-right: 5px;
+                            transition: all 0.7s;
+                        }
+                    }
+
+                    .fa-android {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .redeSocial{
+                display: flex;
+                list-style: none;
+
+                li {
+                    &:nth-child(even){
+                        margin: 0 15px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        @include type-2(14);
+
+                        i {
+                            color: #26ae61;
+                            cursor: pointer;
+                            font-size: 20px;
+                            transition: all 0.7s;
+
+                            &:hover {
+                                color: #fff;
+                                transition: all 0.7s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-login {
+                list-style: none;
+                text-decoration: none;
+                color: #fff;
+                margin-left: 10px;
+                @include type-2(14);
+            }
+
+        }
+
+        &__rowCenter {
+            background-color: #f2f2f2;
+            padding: 20px 0;
+
+            .container {
+                display: flex;
+                align-items: center;
+            }
+
+            .brand {
+                text-decoration: none;
+                color: #fff;
+                display: flex;
+
+                img {
+                    height: 40px;
+                    max-width: 100%;
+                }
+            }
+
+            .menu {
+                display: flex;
+                margin: 0 auto;
+
+                ul {
+                    display: flex;
+                    list-style: none;
+                    li {
+                        a {
+                            text-decoration: none;
+                            font-weight: 600;
+                            padding: 0 20px;
+                            color: #001022;
+                            transition: all 0.7s;
+
+                            &:hover {
+                                transition: all 0.7s;
+                                color: #26ae61;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-admin{
+                text-decoration: none;
+                color: #fff;
+                background-color: #26ae61;
+                border-radius: 3px;
+                font-weight: 500;
+                padding: 10px 20px;
+                transition: all 0.7s;
+                @include type-2(14);
+
+                &:hover {
+                    transition: all 0.7s;
+                    background-color: #001022;
+                }
+
+            }
+
+        }
+
+    }
+}

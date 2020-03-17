@@ -1,0 +1,22 @@
+/*!
+    Theme Name: Imóveis Company
+    Author: Rodrigo Viturino
+*/
+
+// Gerais
+@import './base/reset';
+@import './normalize/_import-now';
+@import './base/grid';
+@import './base/variaveis_e_mixins';
+@import 'global';
+
+// Partls
+@import "./header";
+@import "./parts/home";
+@import "./parts/intro";
+@import "./footer";
+
+// div {
+// font-family: 'PT Mono', monospace;
+// font-family: 'Aref Ruqaa', serif;
+// }

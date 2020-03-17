@@ -1,0 +1,58 @@
+.introducao {
+    background-image: url('./assets/img/banner-home.jpg');
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    &__wrapper {
+
+    .block-title {
+        // display: flex;
+        // align-items: center;
+        // flex-direction: column;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+
+        .title {
+            color: #fff;
+            font-weight: 700;
+            @include type-1(30);
+        }
+
+        .sub-title {
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.3;
+            @include type-1(20);
+        }
+
+        .btn-banner-home {
+            display: inline-block;
+            margin: 0 auto;
+            text-decoration: none;
+            color: #fff;
+            background-color: #26ae61;
+            padding: 10px 30px;
+            border-radius: 4px;
+            transition: all 0.7s;
+            border: solid 1px transparent;
+            @include type-1(18);
+
+            &:hover {
+                transition: all 0.7s;
+                border: solid 1px #26ae61;
+                color: #26ae61;
+                background-color: rgba(255, 255, 255, 0.842);
+            }
+        }
+
+    }
+
+    }
+
+}

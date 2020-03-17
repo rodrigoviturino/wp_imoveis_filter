@@ -1,0 +1,178 @@
+.produtos {
+    padding: 80px 0;
+
+    .block-title{
+        text-align: center; 
+        padding-bottom: 40px;
+
+        h2 {
+            color: #001935;
+            font-weight: 600;
+            line-height: 1.5;
+            @include type-1(30);
+        }
+        p {
+            color: #969696;
+            // padding: 8px 0;
+            line-height: 1.5;
+            @include type-1(18);
+        }
+    }
+
+    &__filter {
+        padding: 20px 0 40px;
+
+        #form-home {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            select {
+                border: solid 1px #cccccc9c;
+                border: solid 1px #fff;
+                background-color: #26ae;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: 500;
+                // width: 17%;
+                margin: 0 10px;
+                color: #fff;
+                cursor: pointer;
+                @include type-2(16);
+
+            }
+
+            button {
+                border: solid 1px #26ae61;
+                background-color: #26ae61;
+                color: #fff;
+                font-weight: 600;
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: all 0.7s;
+                border-radius: 3px;
+                @include type-2(16);
+
+                &:hover {
+                    background-color: transparent;
+                    border: solid 1px #26ae61;
+                    color: #26ae61;
+                    transition: all 0.7s;
+                    display: inline-block;
+                }
+            }
+            
+        }
+
+    }
+
+    &__single {
+        transition: all 1s;
+    
+        &__property-item{   
+            cursor: pointer;
+
+            &:hover {
+                transition: all 1s;
+                opacity: 0.8;
+                
+
+                .property-details {
+                    
+
+                    .btn-propertyDetails {
+                        transition: all 1s;
+                        background-color: #26ae61;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .property-image {
+                border: solid 1px #e7e7e7;
+                transition: all 1s;
+            }
+
+            .property-details {
+                border: solid 1px #e7e7e7;
+
+                .info {
+                    .title {
+                        color: #001935;
+                        font-weight: 600;
+                        padding: 15px;
+                        @include type-3(18);
+                    }
+                    .local {
+                        color: #969696;
+                        padding: 0 15px;
+                        @include type-3(16);
+                    }
+
+                    .state {
+                        color: #969696;
+                        padding: 5px 15px 0;
+                        @include type-3(16);
+                    }
+
+                    .price {
+                        color: #26ae61;
+                        font-weight: 700;
+                        padding: 15px;
+                        @include type-5(18);
+
+                        span {
+                            color: #969696;
+                            font-weight: 600;
+                            @include type-3(12);
+                        }
+                    }
+                }
+            }
+
+            .btn-propertyDetails {
+                color: #001935;
+                text-decoration: none;
+                display: block;
+                font-weight: 400;
+                // border: solid 1px #e7e7e7;
+                border-top: none;
+                padding: 13px 0px;
+                text-align: center;
+                background-color: #f4f4f4;
+                @include type-2(16);
+            }
+
+        }
+
+    }
+    
+    // Butão Ver Mais Produtos
+    .btn-more-product {
+        text-decoration: none;
+        color: #fff;
+        background-color: #26ae61;
+        border-radius: 4px;
+        padding: 10px 30px;
+        text-align: center;
+        width: 20%;
+        max-width: 25%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 2px transparent;
+        transition: all 0.7s;
+        margin: 40px auto;
+        @include type-3(18);
+
+        &:hover {
+            background-color: #26ae6194;
+            border: solid 2px #26ae61;
+            font-weight: 500;
+            width: 22%;
+            transition: all 0.7s;
+        }
+    }
+}

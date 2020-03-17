@@ -1,0 +1,134 @@
+// Variaveis do GRID
+$cols: 12;
+$gutter: 20px;
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+// Box-Sizing
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+// Mixins de Media-Queries
+@mixin device($size) {
+    @if $size == l {
+        @media screen and (min-width: #{$l-device}) {
+            @content;
+        }
+    }
+
+    @else if $size == m {                                           // 1199
+        @media screen and (min-width: #{$m-device}) and (max-width: #{$l-device - 1} ) {
+            @content;
+        }
+    }
+
+    @else if $size == s {               // 759
+        @media screen and (max-width: #{$m-device - 1}) {
+            @content;
+        }
+    }
+}
+
+
+// Função do GRID
+// offset = coluna vazia
+// Podemos trabalhar com essa estrutura, sem usar a class do GRID-1, etc...
+// Ex: .intro { width:grid(4); }   
+
+@function grid($col, $offset: false) {
+    $width: $col / $cols * 100 + '%';
+    $result: calc(#{$width} - #{$gutter});
+
+    @if $offset == offset {
+        $gutter: $gutter / 2;
+        $result: calc(#{$width} + #{$gutter});
+    }
+    @return $result;
+}
+
+
+// Formula do GRID
+// Isso seria para o GRID
+@for $i from 1 through $cols {
+    .grid-#{$i} {
+        width: grid($i);
+    }
+}
+
+// Mixin estrutura do GRID
+@mixin grid-structure {
+    float: left;
+    min-height: 1px;
+    margin-left: $gutter / 2;
+    margin-right: $gutter / 2;
+    @include device(s) {
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+// Aplicando para MOBILE
+// Seletor de class, ele vai pegar toda classe que começa com 'grid-'
+[class^="grid-"] {
+    @include grid-structure;
+}
+
+
+// Gera as classes de OFFSET
+@for $i from 1 through $cols {
+    .offset-#{$i} {
+        margin-left: grid($i, offset);
+        @extend %offset;
+    }
+}
+
+@include device(s) {
+    %offset {
+        margin-left: 0px;
+    }
+}
+
+// Mixins de CLEARFIX
+@mixin clearfix {
+    &::after, &::before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+// Mixin CONTAINER
+@mixin container {
+    max-width: $l-device;
+    margin: 0 auto;
+    position: relative;
+    @include device(m) {
+        max-width: $m-device;
+    }
+    @include device(s) {
+        max-width: $s-device;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    @include clearfix;
+}
+
+.container {
+    @include container;
+}
+
+// Mixin ROW 
+// para eliminar os gutters quando for aplicar grid dentro de grid
+@mixin row {
+    margin-left: -$gutter / 2;
+    margin-right: -$gutter / 2;
+    @include device(s) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    @include clearfix;
+}

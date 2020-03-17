@@ -1,0 +1,212 @@
+// Cores
+$title-main: #3c3954;
+$text-title: #757575;
+$title-section: #3c3954;
+$white:#fff;
+$black:#000;
+$title-hover: #d13a75;
+$icon-hover: #D23E78;
+$bg-content: #F5F8FE;
+$roxo-claro: #ced2ff;
+$bg-input: #f4f4fd;
+$cinza-claro: #fafafa;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700|Poppins:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+
+$font-1: 'Raleway', sans-serif;
+$font-2: 'Poppins', sans-serif;
+$font-3: 'Lato', sans-serif;
+$font-4: 'Muli', sans-serif;
+$font-5: 'Nunito', sans-serif;
+
+// Função de CONVERTER PX to EM
+@function em($pixel, $contexto: 16) {
+    @return $pixel / $contexto + em;
+}
+
+// Mixins TIPOGRAFIA
+@mixin type-1($size){
+
+    font-family: $font-1;
+    @if $size == 12 {
+        font-size:em(12);
+    }
+    @else if $size==14 {
+        font-size: em(14);
+    }
+    @else if $size == 16 {
+        font-size: em(16);
+    }
+    @else if $size == 24 {
+        font-size: em(24);
+    }
+    @else if $size == 18 {
+        font-size: em(18);
+    }
+    @else if $size == 20 {
+        font-size: em(20);
+    }
+    @else if $size == 30 {
+        font-size: em(30);
+    }
+    @else if $size == 40 {
+        font-size: em(40);
+    }
+    @else if $size == 45 {
+        font-size: em(45);
+    }
+    @else if $size == 50 {
+        font-size: em(50);
+    }
+    @else if $size == 60 {
+        font-size: em(60);
+    }
+    @else if $size == 80 {
+        font-size: em(80);
+    }
+}
+
+@mixin type-2($size) {
+    font-family: $font-2;
+    @if $size==12 {
+        font-size: em(12);
+    }
+
+    @else if $size== 14 {
+        font-size: em(14);
+    }
+    @else if $size == 18 {
+        font-size: em(18);
+    }
+    @else if $size == 20 {
+        font-size: em(20);
+    }
+    @else if $size == 24 {
+        font-size: em(24)
+    }
+    @else if $size == 35 {
+        font-size: em(35)
+    }
+    @else if $size == 50 {
+        font-size: em(50)
+    }
+    @else if $size == 80 {
+        font-size: em(80)
+    }
+}
+
+
+@mixin type-3($size) {
+    font-family: $font-3;
+    @if $size==12 {
+        font-size: em(12);
+    }
+
+    @else if $size==14 {
+        font-size: em(14);
+    }
+    @else if $size == 18 {
+        font-size: em(18);
+    }
+    @else if $size == 20 {
+        font-size: em(20);
+    }
+    @else if $size == 24 {
+        font-size: em(24);
+    }
+    @else if $size == 35 {
+        font-size: em(35);
+    }
+    @else if $size == 50 {
+        font-size: em(50);
+    }
+    @else if $size == 80 {
+        font-size: em(80);
+    }
+}
+
+@mixin type-4($size) {
+    font-family: $font-4;
+    @if $size==12 {
+        font-size: em(12);
+    }
+    @else if $size==14 {
+        font-size: em(14);
+    }
+    @else if $size == 18 {
+        font-size: em(18);
+    }
+    @else if $size == 20 {
+        font-size: em(20);
+    }
+    @else if $size == 24 {
+        font-size: em(24);
+    }
+    @else if $size == 35 {
+        font-size: em(35);
+    }
+    @else if $size == 50 {
+        font-size: em(50);
+    }
+    @else if $size == 80 {
+        font-size: em(80);
+    }
+}
+
+@mixin type-5($size) {
+    font-family: $font-5;
+    @if $size==12 {
+        font-size: em(12);
+    }
+    @else if $size==14 {
+        font-size: em(14);
+    }
+    @else if $size==18 {
+        font-size: em(18);
+    }
+    @else if $size == 20 {
+        font-size: em(20);
+    }
+    @else if $size == 24 {
+        font-size: em(24);
+    }
+    @else if $size == 35 {
+        font-size: em(35);
+    }
+    @else if $size == 50 {
+        font-size: em(50);
+    }
+    @else if $size == 80 {
+        font-size: em(80);
+    }
+}
+
+
+
+/* ORDER FLEX */
+.order1 {
+	order: 1;
+}
+
+.order2 {
+	order: 2;
+}
+
+.order3 {
+	order: 3;
+}
+
+.order4 {
+	order: 4;
+}
+
+.order-1 {
+	order: -1;
+}
